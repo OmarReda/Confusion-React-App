@@ -11,15 +11,32 @@
 }
 
 .footer {
-  background-color: #d1c4e9;
+  background-color: #313131;
   margin: 0px auto;
-  padding: 20px 0px 20px 0px;
+  margin-top: 15px;
+  padding: 30px 0px 20px 0px;
+  color: white;
+}
+.footer address {
+  color: white;
+  margin-bottom: 20px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.footer a:hover {
+  color: #c70000;
+  text-decoration: none;
 }
 .jumbotron {
   padding: 70px 30px 70px 30px;
   margin: 0px auto;
-  background: #9575cd;
+  background: #8b0000;
   color: floralwhite;
+  border-radius: 0px;
+  margin-bottom: 15px;
 }
 
 address {
@@ -29,5 +46,5 @@ address {
 }
 
 .navbar-dark {
-  background-color: #512da8;
+  background-color: #313131;
 }

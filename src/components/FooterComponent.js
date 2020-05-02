@@ -26,11 +26,11 @@ function Footer(props) {
           <div className="col-7 col-sm-5">
             <h5>Our Address</h5>
             <address>
-              121, Clear Water Bay Road
+              121, Viale Certosa Road
               <br />
-              Clear Water Bay, Kowloon
+              Metropolitan City of Milan,
               <br />
-              HONG KONG
+              Milan
               <br />
               <i className="fa fa-phone fa-lg"></i>: +852 1234 5678
               <br />
