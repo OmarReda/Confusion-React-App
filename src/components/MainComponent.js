@@ -4,6 +4,7 @@ import Menu from "./MenuComponent";
 import Contact from "./ContactComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
+import BackgroundVideo from "./BackgroundVideo";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { DISHES } from "../shared/dishes";
 import { COMMENTS } from "../shared/comments";
@@ -63,6 +64,7 @@ class Main extends Component {
           <Route exact path="/contactus" component={Contact} />
           <Redirect to="/home" />
         </Switch>
+        <BackgroundVideo />
         <Footer />
       </div>
     );
