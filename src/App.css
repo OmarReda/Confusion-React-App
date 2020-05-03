@@ -90,3 +90,34 @@ address {
 .leader-sub-heading {
   font-weight: 600;
 }
+
+.CardTitle {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dish {
+  margin-bottom: 20px;
+}
+.breadcrumb {
+  width: 100%;
+  background-color: none;
+  background: #333333; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #c70000,
+    #292929
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #c70000,
+    #292929
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.breadcrumb-item.active {
+  color: rgb(170, 170, 170);
+}
+.breadcrumb a {
+  color: white;
+}

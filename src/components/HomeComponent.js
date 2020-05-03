@@ -14,9 +14,7 @@ function RenderCard({ item }) {
     <Card>
       <CardImg src={item.image} alt={item.name} />
       <CardBody>
-        <CardTitle style={{ fontWeight: 600, fontSize: 18 }}>
-          {item.name}
-        </CardTitle>
+        <CardTitle className="CardTitle">{item.name}</CardTitle>
         {item.designation ? (
           <CardSubtitle
             style={{ fontWeight: 500, fontSize: 16, paddingBottom: 5 }}

@@ -21,9 +21,12 @@ function Contact(props) {
         <div className="col-12">
           <h3>Location Information</h3>
         </div>
-        <div className="col-12 col-sm-4 offset-sm-1">
+        <div
+          className="col-12 col-sm-4 offset-sm-1"
+          style={{ marginTop: "20px" }}
+        >
           <h5>Our Address</h5>
-          <address>
+          <address style={{ marginTop: "10px" }}>
             121, Viale Certosa Road
             <br />
             Metropolitan City of Milan,
@@ -38,7 +41,10 @@ function Contact(props) {
             <a href="mailto:confusion@food.net">confusion@food.net</a>
           </address>
         </div>
-        <div className="col-12 col-sm-6 offset-sm-1">
+        <div
+          className="col-12 col-sm-6 offset-sm-1"
+          style={{ marginTop: "20px" }}
+        >
           <h5>Map of our Location</h5>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5594.801744015921!2d9.159536076709012!3d45.48187168878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c115a5eaf50f%3A0x8f737cd9e3364e72!2sMilan%2C%20Metropolitan%20City%20of%20Milan%2C%20Italy!5e0!3m2!1sen!2seg!4v1588377768912!5m2!1sen!2seg"
@@ -48,6 +54,7 @@ function Contact(props) {
             allowfullscreen=""
             aria-hidden="false"
             tabindex="0"
+            style={{ marginTop: "10px" }}
           ></iframe>
         </div>
         <div className="col-12 col-sm-11 offset-sm-1">

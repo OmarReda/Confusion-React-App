@@ -2,22 +2,27 @@ import React from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardTitle,
+  CardBody,
+  CardText,
   Breadcrumb,
   BreadcrumbItem,
+  Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
 function RenderMenuItem({ dish, onClick }) {
   return (
     <Card>
-      <Link to={`/menu/${dish.id}`}>
-        <CardImg width="100%" src={dish.image} alt={dish.name} />
-        <CardImgOverlay>
-          <CardTitle>{dish.name}</CardTitle>
-        </CardImgOverlay>
-      </Link>
+      <CardImg width="100%" src={dish.image} alt={dish.name} />
+      <CardBody>
+        <CardTitle className="CardTitle">{dish.name}</CardTitle>
+        <CardText>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </CardText>
+        <Link to={`/menu/${dish.id}`}></Link>
+      </CardBody>
     </Card>
   );
 }
@@ -25,7 +30,7 @@ function RenderMenuItem({ dish, onClick }) {
 const Menu = (props) => {
   const menu = props.dishes.map((dish) => {
     return (
-      <div className="col-12 col-md-5 m-1" key={dish.id}>
+      <div className="col-12 col-md-6 dish" key={dish.id}>
         <RenderMenuItem dish={dish} />
       </div>
     );
@@ -45,7 +50,9 @@ const Menu = (props) => {
           <hr />
         </div>
       </div>
-      <div className="row">{menu}</div>
+      <div className="row" style={{ textAlign: "center" }}>
+        {menu}
+      </div>
     </div>
   );
 };
