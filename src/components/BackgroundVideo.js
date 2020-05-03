@@ -31,12 +31,14 @@ class BackgroundVideo extends Component {
             position: "absolute",
             width: "45%",
             textAlign: "left",
-            margin: "100px 0px 0px 70px",
+            margin: "110px 0px 0px 70px",
             display: "inline-block",
             fontSize: "45px",
+            fontFamily: "New Times Roman",
+            fontStyle: "italic",
           }}
         >
-          We Care About You <br />
+          We Care About You. <br />
           All of our gradients are checked to deliver our high quality meals.
         </h1>
         <div

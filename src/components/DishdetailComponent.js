@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Card,
   CardImg,
-  CardText,
   CardBody,
   CardTitle,
+  CardText,
   Breadcrumb,
   BreadcrumbItem,
 } from "reactstrap";
@@ -14,7 +14,7 @@ function RenderDish({ dish }) {
   return (
     <div className="col-12 col-md-5 m-1">
       <Card>
-        <CardImg width="100%" src={dish.image} alt={dish.name} />
+        <CardImg top src={dish.image} alt={dish.name} />
         <CardBody>
           <CardTitle>{dish.name}</CardTitle>
           <CardText>{dish.description}</CardText>
@@ -25,20 +25,28 @@ function RenderDish({ dish }) {
 }
 
 function RenderComments({ comments }) {
-  if (comments != null) {
+  if (comments !== null) {
+    const Comment = comments.map((comment) => {
+      return (
+        <div>
+          <ul>
+            <li style={{ listStyleType: "none" }}>{comment.comment}</li>
+            <li style={{ listStyleType: "none" }}>
+              -- {comment.author} ,{" "}
+              {new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "2-digit",
+              }).format(new Date(Date.parse(comment.date)))}
+            </li>
+          </ul>
+        </div>
+      );
+    });
     return (
-      <div className="col-12 col-md-5 m-1">
+      <div>
         <h4>Comments</h4>
-        <ul className="list-unstyled">
-          {/* {comments.map((comment) => {
-            return (
-              <li key={comment.id}>
-                <p>{comment.comment}</p>
-                <p>-- {comment.author}</p>
-              </li>
-            );
-          })} */}
-        </ul>
+        {Comment}
       </div>
     );
   } else {
@@ -64,9 +72,7 @@ const DishDetail = (props) => {
         </div>
         <div className="row">
           <RenderDish dish={props.dish} />
-          <div className="col-12 col-md-5 m-1">
-            <RenderComments comments={props.comments} />
-          </div>
+          <RenderComments comments={props.comments} />
         </div>
       </div>
     );
@@ -74,5 +80,4 @@ const DishDetail = (props) => {
     return <div></div>;
   }
 };
-
 export default DishDetail;
