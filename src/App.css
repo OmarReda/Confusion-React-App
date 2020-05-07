@@ -121,3 +121,20 @@ address {
 .breadcrumb a {
   color: white;
 }
+.modal-header {
+  color: white;
+  background: #333333; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #c70000,
+    #292929
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #c70000,
+    #292929
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.modal-header .close {
+  color: white;
+}
