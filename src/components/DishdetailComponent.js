@@ -58,7 +58,7 @@ function RenderComments({ comments, addComment, dishId }) {
       <h4> Comments </h4>
       <ul className="list-unstyled">
         {showcmnts}
-        <CommentForm addComment={addComment} dishId={dishId} />
+        <CommentForm dishId={dishId} addComment={addComment} />
       </ul>
     </div>
   );
@@ -85,7 +85,11 @@ const DishDetail = (props) => {
       </div>
       <div className="row">
         <RenderDish dish={props.dish} />
-        <RenderComments comments={props.comments} />
+        <RenderComments
+          comments={props.comments}
+          addComment={props.addComment}
+          dishId={props.dish.id}
+        />
       </div>
     </div>
   );
@@ -111,9 +115,13 @@ class CommentForm extends Component {
   }
 
   handleSubmit(values) {
-    console.log("Current State is: " + JSON.stringify(values));
-    alert("Current State is: " + JSON.stringify(values));
     this.toggle();
+    this.props.addComment(
+      this.props.dishId,
+      values.rating,
+      values.author,
+      values.comment
+    );
   }
   render() {
     return (
@@ -131,11 +139,11 @@ class CommentForm extends Component {
             <ModalBody>
               <Row className="form-group">
                 <Col>
-                  <Label htmlFor="rate">Rating</Label>
+                  <Label htmlFor="rating">Rating</Label>
                   <Control.select
-                    model=".rate"
-                    id="rate"
-                    name="rate"
+                    model=".rating"
+                    id="rating"
+                    name="rating"
                     className="form-control"
                     validators={{ required }}
                   >
@@ -147,7 +155,7 @@ class CommentForm extends Component {
                   </Control.select>
                   <Errors
                     className="text-danger"
-                    model=".rate"
+                    model=".rating"
                     show="touched"
                     messages={{
                       required: "Required! ",
@@ -157,11 +165,11 @@ class CommentForm extends Component {
               </Row>
               <Row className="form-group">
                 <Col>
-                  <Label htmlFor="name">Name</Label>
+                  <Label htmlFor="author">Name</Label>
                   <Control.text
-                    model=".name"
-                    id="name"
-                    name="name"
+                    model=".author"
+                    id="author"
+                    name="author"
                     className="form-control"
                     placeholder="Your Name"
                     validators={{
@@ -172,7 +180,7 @@ class CommentForm extends Component {
                   />
                   <Errors
                     className="text-danger"
-                    model=".name"
+                    model=".author"
                     show="touched"
                     messages={{
                       required: "Required! ",
@@ -184,19 +192,19 @@ class CommentForm extends Component {
               </Row>
               <Row className="form-group">
                 <Col>
-                  <Label htmlFor="message">Comment</Label>
+                  <Label htmlFor="comment">Comment</Label>
                   <Control.textarea
                     style={{ resize: "none" }}
-                    model=".message"
-                    id="message"
-                    name="message"
+                    model=".comment"
+                    id="comment"
+                    name="comment"
                     rows="6"
                     className="form-control"
                     validators={{ required }}
                   />
                   <Errors
                     className="text-danger"
-                    model=".message"
+                    model=".comment"
                     show="touched"
                     messages={{
                       required: "Required! ",
