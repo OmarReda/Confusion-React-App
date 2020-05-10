@@ -35,7 +35,7 @@
   background: #333333; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
-    #c70000,
+    #290000,
     #292929
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
@@ -139,7 +139,7 @@ address {
   color: white;
 }
 
-.page-enter {
+/* .page-enter {
   opacity: 0.01;
   transform: translateX(-100%);
 }
@@ -159,4 +159,49 @@ address {
   opacity: 0.01;
   transform: translateX(100%);
   transition: all 300ms ease-out;
+} */
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.carousel-item {
+  height: 500px;
+  background: black;
+  overflow: hidden;
+  background: black;
+  background: -webkit-linear-gradient(rgb(44, 0, 0), rgb(44, 0, 0));
+  background: linear-gradient(rgb(44, 0, 0), rgb(44, 0, 0));
+}
+
+.carousel-caption {
+  top: 40%;
+}
+
+.carousel-caption p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.carousel-caption h3 {
+  font-size: 45px;
+}
+
+.Slider {
+  background: #333333; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #750000,
+    #ffffff,
+    #ffffff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #750000,
+    #ffffff,
+    #ffffff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 50px;
 }

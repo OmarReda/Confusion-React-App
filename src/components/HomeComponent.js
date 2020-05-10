@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardSubtitle,
 } from "reactstrap";
-import BackgroundVideo from "./BackgroundVideo";
+import Slider from "./SliderComponent";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 import { FadeTransform } from "react-animation-components";
@@ -47,7 +47,7 @@ function RenderCard({ item, isLoading, errMess }) {
 function Home(props) {
   return (
     <div className="layout">
-      <div className="container">
+      <div className="container" style={{ marginBottom: "50px" }}>
         <div className="row align-items-start">
           <div className="col-12 col-md m-1">
             <RenderCard
@@ -72,7 +72,16 @@ function Home(props) {
           </div>
         </div>
       </div>
-      <BackgroundVideo />
+      <div
+        className="Slider"
+        style={{
+          backgroundColor: "#290000",
+          paddingTop: "50px",
+          paddingBottom: "50px",
+        }}
+      >
+        <Slider />
+      </div>
     </div>
   );
 }
