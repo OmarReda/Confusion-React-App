@@ -7,6 +7,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -73,3 +74,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## JSON Server 
+
+json-server --watch db.json -p 3001 -d 2000
