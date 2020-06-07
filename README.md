@@ -12,6 +12,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+## JSON Server 
+
+json-server --watch db.json -p 3001 -d 2000
+
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />
@@ -75,7 +81,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-
-## JSON Server 
-
-json-server --watch db.json -p 3001 -d 2000
